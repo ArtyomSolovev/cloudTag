@@ -10,26 +10,39 @@ import Alamofire
 
 class ViewController: UIViewController {
     
-    var arrayOfButtons = [UIButton]()
-    var switcherOfButtons = [Bool]()
-    var arrayOfDrinks = [Drink]()
+    private var arrayOfButtons = [UIButton]()
+    private var arrayOfDrinks = [Drink]()
+    
+    private let scrollView: UIScrollView = {
+        let v = UIScrollView()
+        v.translatesAutoresizingMaskIntoConstraints = false
+        return v
+    }()
+    
+    private let customView: UIView = {
+        let view = UIView()
+        return view
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.addSubview(scrollView)
+        scrollView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
+        scrollView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+        scrollView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
+        scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+        scrollView.addSubview(customView)
         self.view.backgroundColor = .white
-        let frame = view.safeAreaLayoutGuide.layoutFrame
         AF.request("https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Non_Alcoholic")
             .responseDecodable(of: All.self) { (response) in
                 guard let drinks = response.value else { return }
                 drinks.drinks.forEach({ self.arrayOfDrinks.append($0)})
             }
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3) { [self] in
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) { [self] in
             for i in 0..<arrayOfDrinks.count {
                 arrayOfButtons.append(UIButton())
-                switcherOfButtons.append(false)
-                self.view.addSubview(self.arrayOfButtons[i])
+                self.customView.addSubview(self.arrayOfButtons[i])
                 arrayOfButtons[i].setTitle(" \(arrayOfDrinks[i].strDrink) ", for: .normal)
-                arrayOfButtons[i].setTitle("123", for: .selected)
                 arrayOfButtons[i].backgroundColor = .systemGray
                 arrayOfButtons[i].layer.cornerRadius = 8
                 arrayOfButtons[i].addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
@@ -40,15 +53,7 @@ class ViewController: UIViewController {
     }
     
     @objc func buttonAction(sender: UIButton!) {
-        guard let index = arrayOfButtons.index(of: sender) else  {return}
-        if switcherOfButtons[index] == false {
-            sender.applyGradient(colours: [.red, .purple]).cornerRadius = 8
-        } else {
-            sender.applyGradient(colours: [.red])
-            sender.backgroundColor = .red
-        }
-        switcherOfButtons[index].toggle()
-        print(switcherOfButtons[index])
+        sender.applyGradient(colours: [.red, .purple]).cornerRadius = 8
     }
     
     private func placeText(){
@@ -62,8 +67,8 @@ class ViewController: UIViewController {
             for indexOfColumn in 0..<column {
                 widthOfButtons = widthOfButtons + arrayOfButtons[indexOfButton - indexOfColumn].sizeThatFits(sizeOfScreen).width + 8
             }
-            if widthOfButtons < widthOfScreen {
-                arrayOfButtons[indexOfButton].frame = CGRect(x: 8 + widthOfButtons - arrayOfButtons[indexOfButton].sizeThatFits(UIScreen.main.bounds.size).width,
+            if widthOfButtons < widthOfScreen - 8 {
+                arrayOfButtons[indexOfButton].frame = CGRect(x: widthOfButtons - arrayOfButtons[indexOfButton].sizeThatFits(UIScreen.main.bounds.size).width,
                                                       y: 8 + (arrayOfButtons[indexOfButton].sizeThatFits(UIScreen.main.bounds.size).height+8) * line,
                                                       width: arrayOfButtons[indexOfButton].sizeThatFits(UIScreen.main.bounds.size).width,
                                                       height: arrayOfButtons[indexOfButton].sizeThatFits(UIScreen.main.bounds.size).height)
@@ -77,10 +82,9 @@ class ViewController: UIViewController {
                                                       height: arrayOfButtons[indexOfButton].sizeThatFits(UIScreen.main.bounds.size).height)
                 column = 1
             }
-//            print("line: ", line , arrayOfButtons[indexOfButton].titleLabel?.text ?? "", " : ",arrayOfButtons[indexOfButton].frame)
         }
-        
-        
+        scrollView.contentSize = CGSize(width: UIScreen.main.bounds.size.width, height: 8 + (arrayOfButtons[arrayOfButtons.count - 1].sizeThatFits(UIScreen.main.bounds.size).height+8) * line)
+        customView.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: 8 + (arrayOfButtons[arrayOfButtons.count - 1].sizeThatFits(UIScreen.main.bounds.size).height+8) * line)
     }
 }
 
