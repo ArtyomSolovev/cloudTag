@@ -7,23 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AC59E0039D86F8774740A128 /* Pods_cloudTag.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C43FC095100643177CC207E2 /* Pods_cloudTag.framework */; };
 		ACDB725D27F9D6A0002B4AA8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDB725C27F9D6A0002B4AA8 /* AppDelegate.swift */; };
 		ACDB725F27F9D6A0002B4AA8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDB725E27F9D6A0002B4AA8 /* SceneDelegate.swift */; };
 		ACDB726127F9D6A0002B4AA8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDB726027F9D6A0002B4AA8 /* ViewController.swift */; };
-		ACDB726427F9D6A0002B4AA8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACDB726227F9D6A0002B4AA8 /* Main.storyboard */; };
 		ACDB726627F9D6A1002B4AA8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACDB726527F9D6A1002B4AA8 /* Assets.xcassets */; };
 		ACDB726927F9D6A1002B4AA8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACDB726727F9D6A1002B4AA8 /* LaunchScreen.storyboard */; };
+		ACDB727127F9E538002B4AA8 /* Drinks.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDB727027F9E538002B4AA8 /* Drinks.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		798A07D0FE2CE2422CD940C4 /* Pods-cloudTag.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cloudTag.release.xcconfig"; path = "Target Support Files/Pods-cloudTag/Pods-cloudTag.release.xcconfig"; sourceTree = "<group>"; };
 		ACDB725927F9D6A0002B4AA8 /* cloudTag.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cloudTag.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACDB725C27F9D6A0002B4AA8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ACDB725E27F9D6A0002B4AA8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		ACDB726027F9D6A0002B4AA8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		ACDB726327F9D6A0002B4AA8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ACDB726527F9D6A1002B4AA8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ACDB726827F9D6A1002B4AA8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ACDB726A27F9D6A1002B4AA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ACDB727027F9E538002B4AA8 /* Drinks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drinks.swift; sourceTree = "<group>"; };
+		C43FC095100643177CC207E2 /* Pods_cloudTag.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_cloudTag.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E18EBD18961FE0D9D85C8503 /* Pods-cloudTag.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cloudTag.debug.xcconfig"; path = "Target Support Files/Pods-cloudTag/Pods-cloudTag.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC59E0039D86F8774740A128 /* Pods_cloudTag.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +47,8 @@
 			children = (
 				ACDB725B27F9D6A0002B4AA8 /* cloudTag */,
 				ACDB725A27F9D6A0002B4AA8 /* Products */,
+				AF2A64D5A18A5C7860EFF8BF /* Pods */,
+				BC5210A64AD9BDCA893CD790 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -59,12 +66,29 @@
 				ACDB725C27F9D6A0002B4AA8 /* AppDelegate.swift */,
 				ACDB725E27F9D6A0002B4AA8 /* SceneDelegate.swift */,
 				ACDB726027F9D6A0002B4AA8 /* ViewController.swift */,
-				ACDB726227F9D6A0002B4AA8 /* Main.storyboard */,
+				ACDB727027F9E538002B4AA8 /* Drinks.swift */,
 				ACDB726527F9D6A1002B4AA8 /* Assets.xcassets */,
 				ACDB726727F9D6A1002B4AA8 /* LaunchScreen.storyboard */,
 				ACDB726A27F9D6A1002B4AA8 /* Info.plist */,
 			);
 			path = cloudTag;
+			sourceTree = "<group>";
+		};
+		AF2A64D5A18A5C7860EFF8BF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E18EBD18961FE0D9D85C8503 /* Pods-cloudTag.debug.xcconfig */,
+				798A07D0FE2CE2422CD940C4 /* Pods-cloudTag.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		BC5210A64AD9BDCA893CD790 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C43FC095100643177CC207E2 /* Pods_cloudTag.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +98,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ACDB726D27F9D6A1002B4AA8 /* Build configuration list for PBXNativeTarget "cloudTag" */;
 			buildPhases = (
+				A44F72467E5B698E7F3FF4D7 /* [CP] Check Pods Manifest.lock */,
 				ACDB725527F9D6A0002B4AA8 /* Sources */,
 				ACDB725627F9D6A0002B4AA8 /* Frameworks */,
 				ACDB725727F9D6A0002B4AA8 /* Resources */,
+				049FC3E81AF9EFC2E8642949 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -127,11 +153,52 @@
 			files = (
 				ACDB726927F9D6A1002B4AA8 /* LaunchScreen.storyboard in Resources */,
 				ACDB726627F9D6A1002B4AA8 /* Assets.xcassets in Resources */,
-				ACDB726427F9D6A0002B4AA8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		049FC3E81AF9EFC2E8642949 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-cloudTag/Pods-cloudTag-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-cloudTag/Pods-cloudTag-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-cloudTag/Pods-cloudTag-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A44F72467E5B698E7F3FF4D7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-cloudTag-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		ACDB725527F9D6A0002B4AA8 /* Sources */ = {
@@ -140,6 +207,7 @@
 			files = (
 				ACDB726127F9D6A0002B4AA8 /* ViewController.swift in Sources */,
 				ACDB725D27F9D6A0002B4AA8 /* AppDelegate.swift in Sources */,
+				ACDB727127F9E538002B4AA8 /* Drinks.swift in Sources */,
 				ACDB725F27F9D6A0002B4AA8 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -147,14 +215,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		ACDB726227F9D6A0002B4AA8 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				ACDB726327F9D6A0002B4AA8 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		ACDB726727F9D6A1002B4AA8 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -282,6 +342,7 @@
 		};
 		ACDB726E27F9D6A1002B4AA8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E18EBD18961FE0D9D85C8503 /* Pods-cloudTag.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -292,7 +353,7 @@
 				INFOPLIST_FILE = cloudTag/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -304,12 +365,13 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		ACDB726F27F9D6A1002B4AA8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 798A07D0FE2CE2422CD940C4 /* Pods-cloudTag.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -320,7 +382,7 @@
 				INFOPLIST_FILE = cloudTag/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -332,7 +394,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
